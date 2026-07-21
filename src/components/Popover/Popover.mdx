@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as PopoverStories from './Popover.stories';
+
+<Meta of={PopoverStories} />
+
+# Popover
+
+Popover displays floating interactive panels relative to a trigger element.
+
+<Canvas of={PopoverStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Popover, Button, Input } from '@rishabh/ui';
+
+export function PopoverExample() {
+  return (
+    <Popover content={<div>Interactive Panel Content</div>}>
+      {({ toggle }) => <Button onClick={toggle}>Toggle Popover</Button>}
+    </Popover>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Popover` supports full keyboard interaction, closing on `Escape` key press or clicking outside the container.

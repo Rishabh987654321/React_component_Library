@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+Toast displays transient notifications that automatically dismiss.
+
+<Canvas of={ToastStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Toast } from '@rishabh/ui';
+
+export function ToastExample() {
+  return (
+    <Toast title="File Saved" variant="success" onDismiss={() => console.log('Dismissed')}>
+      Your document was saved.
+    </Toast>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Toast` uses `role="status"` and automatically pauses auto-dismiss timers when the mouse hovers over the banner or keyboard focus moves into it, ensuring users have adequate time to read content.

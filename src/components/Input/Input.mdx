@@ -1,0 +1,32 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+Input allows users to enter text values, search queries, or form data.
+
+<Canvas of={InputStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Input } from '@rishabh/ui';
+
+export function FormExample() {
+  return (
+    <Input
+      label="Email Address"
+      placeholder="you@example.com"
+      helperText="We will never share your email."
+    />
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+The `Input` component generates an explicit `id` and `htmlFor` connection between the `<label>` and native `<input>` element. When an `error` message is provided, `aria-invalid="true"` is set on the input and `aria-describedby` links directly to the error message text `id` for screen reader announcement.

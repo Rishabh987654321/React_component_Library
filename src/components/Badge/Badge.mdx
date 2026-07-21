@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+Badges highlight status, counts, or categories.
+
+<Canvas of={BadgeStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Badge } from '@rishabh/ui';
+
+export function BadgeExample() {
+  return (
+    <Badge variant="success">Completed</Badge>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Badge` uses styled `<span>` elements with WCAG AA compliant text/background contrast across both light and dark design token themes.

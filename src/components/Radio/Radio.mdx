@@ -1,0 +1,31 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as RadioStories from './Radio.stories';
+
+<Meta of={RadioStories} />
+
+# Radio & RadioGroup
+
+Radio buttons allow users to select a single option from a mutually exclusive list.
+
+<Canvas of={RadioStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Radio, RadioGroup } from '@rishabh/ui';
+
+export function RadioExample() {
+  return (
+    <RadioGroup legend="Select Plan" value="pro">
+      <Radio value="starter" label="Starter" />
+      <Radio value="pro" label="Pro" />
+    </RadioGroup>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`RadioGroup` wraps radio controls inside a semantic `<fieldset>` with a `<legend>` header. Individual radio buttons use native `<input type="radio">` elements, enabling standard arrow-key navigation within the radio group for screen readers and keyboard users.

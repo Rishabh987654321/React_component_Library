@@ -1,0 +1,106 @@
+/* Design tokens as CSS custom properties — for use anywhere Tailwind
+   classes aren't practical (e.g. inside component internals that ship
+   as plain CSS, or Storybook theme configuration). Toggle dark mode via
+   data-theme="dark" or the .dark class, matching tailwind.config.js. */
+
+:root {
+    /* Surfaces */
+    --surface: #F7F9FB;
+    --surface-lowest: #FFFFFF;
+    --surface-subtle: #F2F4F6;
+    --surface-muted: #ECEEF0;
+    --surface-high: #E6E8EA;
+
+    /* Borders */
+    --border: #C6C6CD;
+    --border-strong: #76777D;
+
+    /* Text */
+    --text: #191C1E;
+    --text-muted: #45464D;
+
+    /* Accent — reserved strictly for interactive states */
+    --accent: #3B82F6;
+    --accent-hover: #2563EB;
+    --accent-subtle: #DBEAFE;
+
+    /* Status */
+    --success: #059669;
+    --success-bg: #D1FAE5;
+    --warning: #D97706;
+    --warning-bg: #FEF3C7;
+    --danger: #BA1A1A;
+    --danger-bg: #FFDAD6;
+
+    /* Code block — same in both modes by convention */
+    --code-bg: #0F172A;
+    --code-text: #94A3B8;
+    --code-keyword: #7DD3FC;
+    --code-string: #34D399;
+    --code-tag: #F87171;
+    --code-attr: #FDE047;
+    --code-comment: #64748B;
+
+    /* Typography */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Geist', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Page-level spacing */
+    --sidebar-w: 280px;
+    --content-max: 768px;
+    --gutter: 1.5rem;
+    --stack-sm: 0.5rem;
+    --stack-md: 1rem;
+    --stack-lg: 2rem;
+
+    /* Component-level tokens */
+    --btn-h-sm: 32px;
+    --btn-h-md: 40px;
+    --btn-h-lg: 48px;
+    --btn-px-sm: 12px;
+    --btn-px-md: 16px;
+    --btn-px-lg: 20px;
+    --input-h-sm: 32px;
+    --input-h-md: 40px;
+    --input-h-lg: 48px;
+    --badge-px: 8px;
+    --badge-py: 2px;
+
+    /* Radius */
+    --radius: 4px;
+    --radius-sm: 2px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 9999px;
+
+    /* Elevation & focus */
+    --shadow-popover: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --focus-ring-width: 2px;
+    --focus-ring-offset: 2px;
+    --focus-ring-color: rgba(59, 130, 246, 0.4);
+}
+
+[data-theme='dark'],
+.dark {
+    --surface: #0A0A0A;
+    --surface-lowest: #131316;
+    --surface-subtle: #18181B;
+    --surface-muted: #1F1F23;
+    --surface-high: #27272A;
+
+    --border: #2A2A2E;
+    --border-strong: #45464D;
+
+    --text: #EFF1F3;
+    --text-muted: #A1A1AA;
+
+    --accent: #60A5FA;
+    --accent-hover: #3B82F6;
+    --accent-subtle: rgba(59, 130, 246, 0.12);
+
+    --danger: #FFB4AB;
+    --danger-bg: #93000A;
+
+    --focus-ring-color: rgba(96, 165, 250, 0.5);
+}

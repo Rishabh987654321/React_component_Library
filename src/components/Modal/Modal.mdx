@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+Modal dialogs disable background interaction and focus attention on a specific task or message.
+
+<Canvas of={ModalStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Modal, Button } from '@rishabh/ui';
+
+export function ModalExample() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open Modal</Button>
+      <Modal open={open} onClose={() => setOpen(false)} title="Confirm Action">
+        <p>Are you sure you want to proceed?</p>
+      </Modal>
+    </>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Modal` uses `createPortal` to render directly to `document.body`, avoiding stacking context bugs. Integrates `focus-trap-react` for focus trapping inside open dialogs (`role="dialog"`, `aria-modal="true"`, `aria-labelledby`). Pressing `Escape` or clicking the backdrop closes the modal, restoring keyboard focus to the triggering element upon closure.

@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+
+Alert displays critical feedback, warning, or informational messages.
+
+<Canvas of={AlertStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Alert } from '@rishabh/ui';
+
+export function AlertExample() {
+  return (
+    <Alert variant="danger" title="Connection Error">
+      Failed to connect to the server. Please try again later.
+    </Alert>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Alert` dynamically assigns `role="alert"` for high-priority error/danger variants (assertive announcement interrupting screen readers) and `role="status"` for routine info/success/warning notifications (polite announcement when screen reader is idle).

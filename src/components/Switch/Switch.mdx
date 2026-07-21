@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as SwitchStories from './Switch.stories';
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+Switch toggles the state of a single setting on or off.
+
+<Canvas of={SwitchStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Switch } from '@rishabh/ui';
+
+export function SwitchExample() {
+  return (
+    <Switch label="Enable Dark Mode" defaultChecked />
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Switch` uses `role="switch"` and `aria-checked="true|false"` on a native `<button>` element. `aria-labelledby` connects the button directly to the label text for screen reader announcements ("On/Off" state).

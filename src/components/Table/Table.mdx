@@ -1,0 +1,41 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+Table presents data in rows and columns.
+
+<Canvas of={TableStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@rishabh/ui';
+
+export function TableExample() {
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Name</TableHead>
+          <TableHead>Status</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Item 1</TableCell>
+          <TableCell>Active</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Table` uses native HTML table semantics (`<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th scope="col">`, `<td>`) providing full built-in screen reader grid navigation without requiring ARIA grid overrides.

@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+Tooltip displays short informational descriptions on hover or focus.
+
+<Canvas of={TooltipStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Tooltip, Button } from '@rishabh/ui';
+
+export function TooltipExample() {
+  return (
+    <Tooltip content="Add item to wishlist">
+      <Button variant="secondary">Favorite</Button>
+    </Tooltip>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Tooltip` renders `role="tooltip"` and connects its `id` to the trigger element's `aria-describedby` attribute. Triggers on both mouse hover AND keyboard focus so non-mouse users can view tooltip content.

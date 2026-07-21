@@ -1,0 +1,32 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+Select allows users to choose a value from a dropdown list.
+
+<Canvas of={SelectStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Select } from '@rishabh/ui';
+
+export function SelectExample() {
+  return (
+    <Select label="Country" defaultValue="us">
+      <option value="us">United States</option>
+      <option value="ca">Canada</option>
+      <option value="uk">United Kingdom</option>
+    </Select>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+Implemented using a styled native `<select>` element to preserve built-in platform accessibility, type-ahead keyboard navigation, and mobile dropdown overlays without introducing custom combobox bugs.

@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as SpinnerStories from './Spinner.stories';
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+Spinner indicates loading or background processing activity.
+
+<Canvas of={SpinnerStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Spinner } from '@rishabh/ui';
+
+export function LoadingExample() {
+  return (
+    <Spinner size="lg" label="Loading data..." />
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+When rendered standalone, `Spinner` includes `role="status"` and a visually-hidden `<span className="sr-only">Loading...</span>` node for screen readers, while setting `aria-hidden="true"` on the SVG animation.

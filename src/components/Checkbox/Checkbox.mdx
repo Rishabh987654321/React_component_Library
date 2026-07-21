@@ -1,0 +1,31 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+Checkboxes permit users to select one or more options from a set or toggle individual settings.
+
+<Canvas of={CheckboxStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Checkbox } from '@rishabh/ui';
+
+export function CheckboxExample() {
+  return (
+    <Checkbox
+      label="Accept terms and conditions"
+      description="You must agree to our Terms of Service before continuing."
+    />
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+Renders a native `<input type="checkbox">` visually hidden underneath custom indicator elements. Focus management relies on the native input element (`Space` key toggles checked state) with full keyboard focus outline via `peer-focus-visible`.

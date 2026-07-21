@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+Tabs organize content into separate views, allowing users to switch between them easily.
+
+<Canvas of={TabsStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Tabs, TabsList, TabsTrigger, TabsContent } from '@rishabh/ui';
+
+export function TabsExample() {
+  return (
+    <Tabs defaultValue="tab1">
+      <TabsList>
+        <TabsTrigger value="tab1">Account</TabsTrigger>
+        <TabsTrigger value="tab2">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="tab1">Account settings content...</TabsContent>
+      <TabsContent value="tab2">Password settings content...</TabsContent>
+    </Tabs>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Tabs` implements the WAI-ARIA Tabs pattern using `role="tablist"`, `role="tab"` with `aria-selected`, and `role="tabpanel"` linked via `aria-controls` and `aria-labelledby`. Employs a roving `tabIndex` (`tabIndex={0}` for active tab, `-1` for inactive tabs) with `ArrowLeft`, `ArrowRight`, `Home`, and `End` keyboard navigation.

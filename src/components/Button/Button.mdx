@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Buttons allow users to take actions, submit forms, or trigger interactions throughout the interface.
+
+<Canvas of={ButtonStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Button } from '@rishabh/ui';
+
+export function Example() {
+  return (
+    <Button variant="primary" size="md" onClick={() => console.log('Clicked')}>
+      Click Me
+    </Button>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+Buttons are natively focusable and keyboard-operable (`Enter` and `Space` keys activate). Focus is visually indicated with a 2px accent-colored ring with a 2px offset (`focus-ring`). Loading states dynamically set `aria-busy="true"` on the native `<button>` element so screen readers announce the pending state, while the decorative spinner icon has `aria-hidden="true"`.

@@ -1,0 +1,39 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+Card groups related content and actions together in a structured container.
+
+<Canvas of={CardStories.Default} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+<Source code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Button } from '@rishabh/ui';
+
+export function CardExample() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Card Title</CardTitle>
+        <CardDescription>Card description text goes here.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Main content area</p>
+      </CardContent>
+      <CardFooter>
+        <Button>Action</Button>
+      </CardFooter>
+    </Card>
+  );
+}`} language="tsx" />
+
+## Accessibility
+
+`Card` uses semantic layout containers (`CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`) with heading hierarchy (`h3`) and contrast-compliant borders.
