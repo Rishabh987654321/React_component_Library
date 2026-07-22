@@ -6,10 +6,9 @@ An accessible, themeable React component library and design system with Storyboo
 [![Storybook](https://img.shields.io/badge/Storybook-Live_Docs-ff69b4.svg?style=flat-square)](https://6a5f5b15811622401a531594-jqzcmtbzal.chromatic.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-## Live Storybook Documentation
+[![Storybook](https://img.shields.io/badge/Storybook-Live_Docs-ff69b4.svg?style=flat-square)](https://react-component-library-mu.vercel.app/)
 
-**[Explore Live Storybook Documentation →](https://6a5f5b15811622401a531594-jqzcmtbzal.chromatic.com/)**
-
+**[Explore Live Storybook Documentation →](https://react-component-library-mu.vercel.app/)**
 ---
 
 ## Installation
