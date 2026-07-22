@@ -8,7 +8,7 @@ An accessible, themeable React component library and design system with Storyboo
 
 ## Live Storybook Documentation
 
-**[Explore Live Storybook Documentation $\rightarrow$](https://6a5f5b15811622401a531594-jqzcmtbzal.chromatic.com/)**
+**[Explore Live Storybook Documentation →](https://6a5f5b15811622401a531594-jqzcmtbzal.chromatic.com/)**
 
 ---
 
