@@ -14,6 +14,8 @@ export default defineConfig({
     {
       name: 'generate-css-dts',
       closeBundle() {
+        const distDir = path.resolve(__dirname, 'dist');
+        fs.mkdirSync(distDir, { recursive: true });
         const cssDtsContent = 'declare const styles: string;\nexport default styles;\n';
         fs.writeFileSync(path.resolve(__dirname, 'dist/style.css.d.ts'), cssDtsContent);
         fs.writeFileSync(path.resolve(__dirname, 'dist/styles.css.d.ts'), cssDtsContent);
