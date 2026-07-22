@@ -12,6 +12,7 @@ const meta: Meta<typeof Input> = {
     label: 'Email address',
     placeholder: 'you@example.com',
     size: 'md',
+    className: 'w-80',
   },
 };
 

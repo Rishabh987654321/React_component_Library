@@ -20,6 +20,12 @@ export const globalTypes = {
 const preview: Preview = {
   parameters: {
     layout: 'centered',
+    docs: {
+      story: {
+        inline: true,
+        height: 'auto',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -49,7 +55,7 @@ const preview: Preview = {
         root.setAttribute('data-theme', theme);
       }
       return (
-        <div className="p-4 bg-surface dark:bg-surface-dark text-text dark:text-text-dark min-h-screen transition-colors duration-200">
+        <div className="p-6 bg-surface dark:bg-surface-dark text-text dark:text-text-dark transition-colors duration-200 flex items-center justify-center w-full min-h-[100px] rounded-lg">
           <Story />
         </div>
       );

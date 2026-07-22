@@ -11,6 +11,7 @@ const meta: Meta<typeof Alert> = {
     title: 'System Notification',
     children: 'Your changes have been saved successfully.',
     variant: 'info',
+    className: 'max-w-md',
   },
 };
 

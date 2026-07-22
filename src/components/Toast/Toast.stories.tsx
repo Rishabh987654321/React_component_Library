@@ -11,6 +11,7 @@ const meta: Meta<typeof Toast> = {
     title: 'File Uploaded',
     children: 'Your document report.pdf was saved.',
     variant: 'success',
+    className: 'max-w-md',
   },
 };
 

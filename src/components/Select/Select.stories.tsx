@@ -10,6 +10,7 @@ const meta: Meta<typeof Select> = {
   args: {
     label: 'Country',
     defaultValue: 'us',
+    className: 'w-80',
   },
 };
 
