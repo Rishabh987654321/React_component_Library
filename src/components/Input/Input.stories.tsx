@@ -6,6 +6,7 @@ const meta: Meta<typeof Input> = {
   component: Input,
   argTypes: {
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
+    onChange: { action: 'changed' },
   },
   args: {
     label: 'Email address',

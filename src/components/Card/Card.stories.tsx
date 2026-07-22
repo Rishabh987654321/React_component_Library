@@ -11,6 +11,10 @@ export default meta;
 type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
+  parameters: {
+    layout: 'padded',
+    controls: { disable: true },
+  },
   render: () => (
     <Card className="max-w-md">
       <CardHeader>

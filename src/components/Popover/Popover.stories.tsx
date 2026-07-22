@@ -12,6 +12,9 @@ export default meta;
 type Story = StoryObj<typeof Popover>;
 
 export const Default: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
   render: () => (
     <div className="p-10 flex justify-center">
       <Popover

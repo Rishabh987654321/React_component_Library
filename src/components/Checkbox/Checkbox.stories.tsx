@@ -4,6 +4,9 @@ import { Checkbox } from './Checkbox';
 const meta: Meta<typeof Checkbox> = {
   title: 'Inputs/Checkbox',
   component: Checkbox,
+  argTypes: {
+    onChange: { action: 'changed' },
+  },
   args: {
     label: 'Accept terms and conditions',
     description: 'You must agree to our Terms of Service before continuing.',

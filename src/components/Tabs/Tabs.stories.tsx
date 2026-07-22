@@ -10,6 +10,10 @@ export default meta;
 type Story = StoryObj<typeof Tabs>;
 
 export const Default: Story = {
+  parameters: {
+    layout: 'padded',
+    controls: { disable: true },
+  },
   render: () => (
     <Tabs defaultValue="account" className="max-w-md">
       <TabsList>

@@ -13,6 +13,7 @@ const meta: Meta<typeof Button> = {
       control: 'select',
       options: ['sm', 'md', 'lg'],
     },
+    onClick: { action: 'clicked' },
   },
   args: {
     children: 'Click me',
@@ -27,6 +28,9 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {};
 
 export const AllVariants: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
   render: (args) => (
     <div className="flex flex-wrap gap-4">
       <Button {...args} variant="primary">
@@ -46,6 +50,9 @@ export const AllVariants: Story = {
 };
 
 export const AllSizes: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
   render: (args) => (
     <div className="flex items-center gap-4">
       <Button {...args} size="sm">

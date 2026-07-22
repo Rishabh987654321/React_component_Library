@@ -15,6 +15,17 @@ export function Tooltip({ content, children, className, position = 'top' }: Tool
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  React.useEffect(() => {
+    if (!open) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [open]);
+
   const positionClasses = {
     top: 'bottom-full mb-2 left-1/2 -translate-x-1/2',
     bottom: 'top-full mt-2 left-1/2 -translate-x-1/2',

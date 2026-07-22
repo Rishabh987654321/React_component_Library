@@ -11,6 +11,10 @@ export default meta;
 type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
+  parameters: {
+    layout: 'padded',
+    controls: { disable: true },
+  },
   render: () => (
     <Table>
       <TableHeader>

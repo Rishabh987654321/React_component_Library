@@ -1,4 +1,4 @@
-import { forwardRef, createContext, useContext, useId, type InputHTMLAttributes, type FieldsetHTMLAttributes, type ReactNode } from 'react';
+import { forwardRef, createContext, useContext, useState, useId, type InputHTMLAttributes, type FieldsetHTMLAttributes, type ReactNode } from 'react';
 import { cn } from '../../utils/cn';
 
 interface RadioContextValue {
@@ -23,7 +23,8 @@ export function RadioGroup({
   className,
   legend,
   name: customName,
-  value,
+  value: controlledValue,
+  defaultValue,
   onChange,
   disabled,
   children,
@@ -31,9 +32,19 @@ export function RadioGroup({
 }: RadioGroupProps) {
   const generatedName = useId();
   const name = customName || generatedName;
+  const [uncontrolledValue, setUncontrolledValue] = useState(defaultValue || '');
+
+  const value = controlledValue !== undefined ? controlledValue : uncontrolledValue;
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (controlledValue === undefined) {
+      setUncontrolledValue(e.target.value);
+    }
+    onChange?.(e);
+  };
 
   return (
-    <RadioContext.Provider value={{ name, value, onChange, disabled }}>
+    <RadioContext.Provider value={{ name, value, onChange: handleChange, disabled }}>
       <fieldset className={cn('flex flex-col gap-2 font-sans border-none p-0 m-0', className)} {...props}>
         {legend && (
           <legend className="text-label-caps font-semibold text-text dark:text-text-dark mb-1">

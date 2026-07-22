@@ -2,8 +2,8 @@ import { create } from '@storybook/theming/create';
 
 export default create({
   base: 'light',
-  brandTitle: '@rishabh/ui Design System',
-  brandUrl: 'https://github.com/rishabh/ui',
+  brandTitle: 'React Component Library',
+  brandUrl: 'https://github.com/Rishabh987654321/React_component_Library',
 
   colorPrimary: '#3B82F6',
   colorSecondary: '#3B82F6',

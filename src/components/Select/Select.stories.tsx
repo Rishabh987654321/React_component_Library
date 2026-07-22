@@ -4,6 +4,9 @@ import { Select } from './Select';
 const meta: Meta<typeof Select> = {
   title: 'Inputs/Select',
   component: Select,
+  argTypes: {
+    onChange: { action: 'changed' },
+  },
   args: {
     label: 'Country',
     defaultValue: 'us',

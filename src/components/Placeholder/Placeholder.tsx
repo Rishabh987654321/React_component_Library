@@ -7,7 +7,7 @@ export interface PlaceholderProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const Placeholder: FC<PlaceholderProps> = ({
-  title = '@rishabh/ui Component Library',
+  title = 'React Component Library',
   description = 'Phase 0 setup complete. Ready for Phase 1 & Phase 2 components.',
   className,
   ...props

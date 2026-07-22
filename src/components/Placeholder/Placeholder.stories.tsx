@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: '@rishabh/ui Component Library',
+    title: 'React Component Library',
     description: 'Phase 1 setup complete. ThemeProvider and useTheme hook ready.',
   },
 };

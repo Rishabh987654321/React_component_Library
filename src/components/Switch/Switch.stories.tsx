@@ -4,6 +4,9 @@ import { Switch } from './Switch';
 const meta: Meta<typeof Switch> = {
   title: 'Inputs/Switch',
   component: Switch,
+  argTypes: {
+    onChange: { action: 'toggled' },
+  },
   args: {
     label: 'Dark mode',
     description: 'Adjust the visual theme of the application.',

@@ -12,6 +12,9 @@ export default meta;
 type Story = StoryObj<typeof Modal>;
 
 export const Default: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
   render: () => {
     const [open, setOpen] = useState(false);
 

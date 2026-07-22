@@ -17,6 +17,9 @@ type Story = StoryObj<typeof Badge>;
 export const Default: Story = {};
 
 export const AllVariants: Story = {
+  parameters: {
+    controls: { disable: true },
+  },
   render: () => (
     <div className="flex gap-3">
       <Badge variant="default">Default</Badge>

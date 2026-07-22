@@ -4,9 +4,12 @@ import { Radio, RadioGroup } from './Radio';
 const meta: Meta<typeof RadioGroup> = {
   title: 'Inputs/Radio',
   component: RadioGroup,
+  argTypes: {
+    onChange: { action: 'changed' },
+  },
   args: {
     legend: 'Select a plan',
-    value: 'starter',
+    defaultValue: 'starter',
   },
 };
 
@@ -14,6 +17,19 @@ export default meta;
 type Story = StoryObj<typeof RadioGroup>;
 
 export const Default: Story = {
+  render: (args) => (
+    <RadioGroup {...args}>
+      <Radio value="starter" label="Starter" description="$10/mo for basic features." />
+      <Radio value="pro" label="Pro" description="$30/mo for team features." />
+      <Radio value="enterprise" label="Enterprise" description="Custom pricing for scale." />
+    </RadioGroup>
+  ),
+};
+
+export const Controlled: Story = {
+  args: {
+    value: 'pro',
+  },
   render: (args) => (
     <RadioGroup {...args}>
       <Radio value="starter" label="Starter" description="$10/mo for basic features." />
